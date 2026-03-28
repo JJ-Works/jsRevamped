@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table, tr,th{
+            /* border-collapse: collapse; */
+            border: 2px solid salmon;
+            border-radius: 10px;
+            background-color: rgb(207, 221, 221);
+            padding: .5em .5em 0.5em .5em;
+        }
+
+        td{
+            border-radius: 1em;
+            background-color: #fff;
+        }
+
+        input{
+            border: none;
+            padding: .5em;
+            border-radius: 1rem;
+        }
+      
+    </style>
+</head>
+<body>
+    <table border="true" title="table" width="100%" spellcheck="true">
+       <caption>Table of contacts</caption>
+        <tr>
+            <th width="33%" >name</th>
+            <th width="33%">address</th>
+            <th width="33%">phone</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter name" ></td>
+            <td >gongabu</td>
+            <td>9818562314</td>
+        </tr>
+        <tr>
+            <td>ram</td>
+            <td>gongabu</td>
+            <td>9818562314</td>
+        </tr>
+    </table>
+</body>
+</html>
