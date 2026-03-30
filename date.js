@@ -11,3 +11,12 @@ console.log(`${myNewDate.toLocaleString()} is the new date `);
 
 let myTimeStamp = new Date()
 console.log(`${myTimeStamp.getTime()} `);
+console.log(Math.ceil(Date.now()/(1000)))
+console.log(
+myTimeStamp.toLocaleDateString('ne',{
+    
+    weekday:"long",
+    day:'2-digit',
+    year:'numeric'
+
+}))
