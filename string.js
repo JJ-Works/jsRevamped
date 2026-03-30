@@ -124,4 +124,12 @@
 
 // console.log(`${result.trim()} `);
 
-//Working with precision
+//Working with numbers
+const num1 = 2.34623
+console.log("toFixed: "+ (num1.toFixed(2)))
+console.log("toPrecision: " + (num1.toPrecision(3)))
+
+const max = 50
+const min = 30
+
+console.log(`${Math.ceil(Math.random() * (max - min +1) + min ) } `);
