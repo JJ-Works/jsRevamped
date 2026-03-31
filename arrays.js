@@ -45,4 +45,4 @@ let arraySecond = arrayFirst.flat()
 console.log(arraySecond)
 
 console.log(`${Array.isArray(arrayFirst)} this is an array just checking with Array.isArray `);
-console.log(`${Array.from('KKisthegreaterestsingerofalltime')} this Array.from() can convert anything to an Array. `);
+console.log(`${Array.from('KKisthegreaterestsingerofalltime')} this Array.from() or Array.of() can convert anything to an Array. `);
