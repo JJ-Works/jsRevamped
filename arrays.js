@@ -30,6 +30,10 @@
 const fruit = ["mangoes", 'apple', 'banana']
 const vegetable = ['carrot', 'ladyfinger', 'radish', "shallot"]
 
+
+let fruitExtra = fruit.map(vars => "juicy " + vars )
+let fruitFilter = fruitExtra.filter(vars => vars === "juicy mangoes")
+console.log(`${fruitFilter} `);
 // console.log(fruit.concat(vegetable))
 // fruit.push(vegetable)
 // console.log(`${fruit} `);
@@ -41,8 +45,8 @@ const vegetable = ['carrot', 'ladyfinger', 'radish', "shallot"]
 // console.log(`${foodArray} `);
 
 let arrayFirst = [1,3,4,[23,43,64,64,77,33],23,[222,333,444,555,[23940,[209349]]]]
-let arraySecond = arrayFirst.flat()
-console.log(arraySecond)
+// let arraySecond = arrayFirst.flat()
+// console.log(arraySecond)
 
-console.log(`${Array.isArray(arrayFirst)} this is an array just checking with Array.isArray `);
-console.log(`${Array.from('KKisthegreaterestsingerofalltime')} this Array.from() or Array.of() can convert anything to an Array. `);
+// console.log(`${Array.isArray(arrayFirst)} this is an array just checking with Array.isArray `);
+// console.log(`${Array.from('KKisthegreaterestsingerofalltime')} this Array.from() or Array.of() can convert anything to an Array. `);
