@@ -31,7 +31,7 @@ const booksDetails = books.filter( (book) => book)
 
 // console.log(booksDetails);
 
-//Chaining
+//chaining
 
 // const chainedVals = books.filter( (book) => book.publish <= 2000).map((filtered) => filtered.edition >= 2008?filtered:)
 // console.log(chainedVals);
@@ -40,5 +40,11 @@ const booksDetails = books.filter( (book) => book)
 const numArr = [1,2,3,4,5,6]
 const initial = 0
 let newNumArr = numArr.reduce((accumulator, current) => accumulator + current, initial)
+// let newNumArr = numAr.reduce((acc, cv) => {
+    // acc + cv}, 0)
+// this is just loops..Accumulator stores the previous value and the current value stores the 
+// current value and then they are added or any other operations . this can be used in 
+// carts items instead of using foreach and pushing values and then adding each ones which is a hassle
 
+// 
 console.log(`${newNumArr} `);
