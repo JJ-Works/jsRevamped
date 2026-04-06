@@ -27,5 +27,18 @@ const books = [
 ];
 
 const booksDetails = books.filter( (book) => book)
+// const booksDetails = books.map( (book) => book)
 
-console.log(booksDetails);
+// console.log(booksDetails);
+
+//Chaining
+
+// const chainedVals = books.filter( (book) => book.publish <= 2000).map((filtered) => filtered.edition >= 2008?filtered:)
+// console.log(chainedVals);
+
+
+const numArr = [1,2,3,4,5,6]
+const initial = 0
+let newNumArr = numArr.reduce((accumulator, current) => accumulator + current, initial)
+
+console.log(`${newNumArr} `);
