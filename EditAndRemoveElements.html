@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+    <ul class="language">
+        <li>Java</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement("li");
+            li.innerHTML = `${langName}`;
+
+            const ul = document.querySelector('.language');
+            ul.style.color = "white";
+            ul.appendChild(li);
+
+        }
+        addLanguage("JavaScript");
+        addLanguage("Python");
+
+        // This method is slightly unoptimized as the querySelector needs to traverse through all the 
+        // tree structure to find the required element
+        // so instead of this we can use createTextNode which saves a little cost.
+
+        function addLanguageOptiWay(langName) {
+
+            const li = document.createElement("li")
+            li.appendChild(document.createTextNode(langName)) //This appends in the li not ul
+
+            document.querySelector('.language').appendChild(li)
+
+
+
+        }
+
+        addLanguageOptiWay("Ruby")
+
+    </script>
+</body>
+
+</html>
