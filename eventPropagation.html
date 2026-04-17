@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Propagation Demo</title>
+</head>
+<body>
+
+<div id="parent" style="padding:50px; background:lightblue;">
+  Parent
+  <button id="child" style="padding:20px; margin-top:20px;">
+    Click Me
+  </button>
+</div>
+
+<script>
+  const parent = document.getElementById("parent");
+  const child = document.getElementById("child");
+
+  // CAPTURING phase (third argument = true)
+  parent.addEventListener("click", () => {
+    console.log("Parent (Capturing)");
+  }, true);
+
+  child.addEventListener("click", () => {
+    console.log("Child (Capturing)");
+  }, true);
+
+  // BUBBLING phase (default)
+  parent.addEventListener("click", () => {
+    console.log("Parent (Bubbling)");
+  });
+
+  child.addEventListener("click", () => {
+    console.log("Child (Bubbling)");
+  });
+
+</script>
+
+</body>
+</html>
