@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            /* justify-content: center; */
+            /* flex-direction: column; */
+            /* align-items: center; */
+            justify-content: center;
+            
+            height: 100%;
+            width: 100%;
+        }
+        #btn{
+            color: black;
+            background-color: wheat;
+            width: 20vw;
+            height: 20vh;
+            position: relative;
+            top: 25vh;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click me</button>
+</body>
+<script>
+
+    btn = document.getElementById("btn");
+        let count = 0;
+
+    btn.addEventListener('click', (e)=>{
+        count++;
+        console.log(count);
+        
+        if(count>=10){
+            alert("enough");
+            event.target.disabled = true;
+        }
+    },false)
+
+</script>
+
+</html>
