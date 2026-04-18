@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="red" data-color="red"=""></div>
+        <div id="teal" data-color="teal"></div>
+        <div id="pink" data-color="pink"></div>
+    </div>
+</body>
+
+<script>
+    let body = document.body.style
+    let container = document.getElementById("container")
+    body.backgroundColor = 'gray'
+    container.style.backgroundColor = "white"
+    container.style.height = "30vh"
+    container.style.width = "50vw"
+    container.style.display = 'flex'
+    container.style.justifyContent = 'space-between'
+    body.display = "flex"
+    body.justifyContent = 'center'
+    
+    let red = document.getElementById("red").style
+    let teal = document.getElementById("teal").style
+    let pink = document.getElementById("pink").style
+
+    red.backgroundColor = "red"
+    teal.backgroundColor = "teal"
+    pink.backgroundColor = "pink"
+
+    red.width = '33%'
+
+    teal.width = '33%'
+
+    pink.width = '33%'    
+
+    container.addEventListener('click', function(e){
+
+        const colors = e.target.dataset.color;
+        if(colors === "red" || colors === "teal" || colors === "pink"){
+          console.log(`${colors} `);
+        body.backgroundColor = colors;
+      }
+    },false)
+
+
+</script>
+</html>
