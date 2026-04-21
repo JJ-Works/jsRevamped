@@ -14,22 +14,31 @@
     <div id="outputField"
         style="background-color: rgb(209, 205, 205); height: 3rem;width: 50vw; display: flex; align-items: center; padding: 5px;">
     </div>
+
+    <div id="outputField2"
+        style="background-color: rgb(209, 205, 205); height: 3rem;width: 50vw; display: flex; align-items: center; padding: 5px;">
+    </div>
 </body>
 
 <script>
-    let inputVal = document.getElementById('inputField')
-    let outputVal = document.getElementById('outputField')
+    let inputVal = document.getElementById('inputField');
+    let outputVal = document.getElementById('outputField');
+    let outputVal2 = document.getElementById('outputField2');
 
-    let count = 0;
+    let counts = 0;
     // inputVal.addEventListener('change',() => {
     //     outputVal.innerText = inputVal.value;
     // })
-    inputVal.addEventListener('input',(e) => {
-        count = e.target.value.length;
-        outputVal.innerText = e.target.value;
+    inputVal.addEventListener('input', (e) => {
+        // counts = e.target.value;
+        counts = inputVal.value.length;
+        if (counts <= 20) {
+            outputVal.innerText = e.target.value;
+
+            outputVal2.textContent = `Letter Count: ${counts}`;
+        }
     })
 
-    console.log(count);
 
 </script>
 
