@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: whitesmoke;">
+    Enter:
+    <input id="inputField" type="text" placeholder="Word Limit 20" style="width: 10%;">
+    <br><br>
+    <div id="outputField"
+        style="background-color: rgb(209, 205, 205); height: 3rem;width: 50vw; display: flex; align-items: center; padding: 5px;">
+    </div>
+</body>
+
+<script>
+    let inputVal = document.getElementById('inputField')
+    let outputVal = document.getElementById('outputField')
+
+    let count = 0;
+    // inputVal.addEventListener('change',() => {
+    //     outputVal.innerText = inputVal.value;
+    // })
+    inputVal.addEventListener('input',(e) => {
+        count = e.target.value.length;
+        outputVal.innerText = e.target.value;
+    })
+
+    console.log(count);
+
+</script>
+
+</html>
