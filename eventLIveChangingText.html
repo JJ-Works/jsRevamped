@@ -36,6 +36,9 @@
             outputVal.innerText = e.target.value;
 
             outputVal2.textContent = `Letter Count: ${counts}`;
+        }else{
+            outputVal.textContent = 'Letter limit reached.'
+            e.target.disabled = true;
         }
     })
 
