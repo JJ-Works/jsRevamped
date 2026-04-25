@@ -1,0 +1,10 @@
+Async Code
+JS is a synchronous  and single threaded language. Inorder to execute new line the previous should be executed
+then only the new line will be executed.
+
+There are two types of Code
+
+Blocking Code -> Block the flow of the program 
+
+Non Blocking Code
+
