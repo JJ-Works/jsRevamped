@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Learning Async</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(() => {
+    //     console.log(`Hello this is printing using setTimeOut function `);
+    // }, 2000);
+
+
+    //setTimeOut prints once where as setInterval prints continously considering the interval or set time gap.
+
+    // it need a handler to work that is a callback function or refernce of a function.
+    // lets take this example.
+
+    const funcOne = () => console.log("funcOne")
+    // setInterval(() => {
+        // console.log(`Hello this is printing using setInterval function `);
+    // }, 2000);
+
+    const fucnOne = setInterval(funcOne,2000)
+
+     let btn = document.getElementById("stop")
+     btn.addEventListener('click',()=>{
+        clearInterval(fucnOne)
+     })
+    
+</script>
+
+</html>
