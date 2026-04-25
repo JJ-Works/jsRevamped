@@ -27,12 +27,20 @@
         // console.log(`Hello this is printing using setInterval function `);
     // }, 2000);
 
-    const fucnOne = setInterval(funcOne,2000)
+    // const fucnOne = setInterval(funcOne,2000)
 
-     let btn = document.getElementById("stop")
-     btn.addEventListener('click',()=>{
-        clearInterval(fucnOne)
-     })
+    const printThis = setInterval(() => {
+        console.log("Printing Continuosly")
+        console.log(Date.now());
+    }, 2000)
+
+
+    //  let btn = document.getElementById("stop")
+    //  btn.addEventListener('click',()=>{
+    //     clearInterval(fucnOne)
+    //  })
+
+
     
 </script>
 
