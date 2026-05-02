@@ -27,17 +27,26 @@
         // console.log(`Hello this is printing using setInterval function `);
     // }, 2000);
 
+    let intervallll = setInterval(funcOne, 1000);
+
+    let btn = document.getElementById("stop").addEventListener('click',() => {
+        console.log(`clicked `);
+        clearInterval(intervallll)
+    })
+    
+
     // const fucnOne = setInterval(funcOne,2000)
 
-    const printThis = setInterval(() => {
-        console.log("Printing Continuosly")
-        console.log(Date.now());
-    }, 2000)
+    // const printThis = setInterval(() => {
+    //     console.log("Printing Continuosly")
+    //     console.log(Date.now());
+    // }, 2000)
 
 
     //  let btn = document.getElementById("stop")
     //  btn.addEventListener('click',()=>{
-    //     clearInterval(fucnOne)
+    //     console.log(`Loop stopped `);
+    //     clearInterval(printThis)
     //  })
 
 
