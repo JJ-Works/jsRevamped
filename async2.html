@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="background-color: brown; display: flex; align-items: center; justify-content: center;">
-    <div style="height: 30vh;display: flex; align-items: center; justify-content: center;flex-direction: column; width: 60vw; background-color: hwb(0 40% 60% / 0.6); border-radius: 1rem;" class="texts">
+    <div style="height: 30vh;display: flex; align-items: center; justify-content: center;flex-direction: column; width: 60vw; background-color: hwb(0 40% 60% / 0.6); border-radius: 1rem;"
+        class="texts">
 
         <h1 id="h1">Random Color Generator</h1>
         <br>
         <br>
         <div class="inner">
-            
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
+
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
         </div>
     </div>
-    
+
 </body>
 <script>
-    function colorGenerator(){
-        let random = Math.floor(Math.random()*10000 + 1)
-        let h1 = document.getElementById('h1')
-        h1.innerText = `#${random}`;
-        // console.log(`${random}`);
-        return random
+    function colorGenerator() {
+        let hex = '0123456789ABCDEF';
+        let h1 = document.getElementById('h1');
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            
+            color += hex[Math.floor(Math.random() * 16 )];
+            
+        }
+        h1.innerText = `${color}`;
+        
+        console.log(`${color}`);
+        return color;
     }
 
-    const start = document.getElementById('start')
-    start.addEventListener('click',(e)=>{
-        const body = document.body
-        
-        body.style.backgroundColor = '#'+colorGenerator()
+    const start = document.getElementById('start');
+    start.addEventListener('click', (e) => {
+        const body = document.body;
+
+        body.style.backgroundColor = colorGenerator();
     })
 
 </script>
+
 </html>
