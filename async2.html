@@ -21,14 +21,19 @@
 </body>
 <script>
     function colorGenerator(){
-        let random = Math.random()*10000 + 1
+        let random = Math.floor(Math.random()*10000 + 1)
         let h1 = document.getElementById('h1')
-        h1.innerText = random;
-        console.log(` ${random}`);
+        h1.innerText = `#${random}`;
+        // console.log(`${random}`);
+        return random
     }
 
     const start = document.getElementById('start')
-    start.addEventListener('click',colorGenerator)
+    start.addEventListener('click',(e)=>{
+        const body = document.body
+        
+        body.style.backgroundColor = '#'+colorGenerator()
+    })
 
 </script>
 </html>
