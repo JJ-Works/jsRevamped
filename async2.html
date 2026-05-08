@@ -38,12 +38,34 @@
         return color;
     }
 
-    const start = document.getElementById('start');
-    start.addEventListener('click', (e) => {
-        const body = document.body;
+    // const body = document.body;
+    // const start = document.getElementById('start');
+    // const startFunc = start.addEventListener('click', (e) => {
+    //     setInterval(colorGenerator,2000)
+    //     body.style.backgroundColor = colorGenerator();
+    //     // function changeBgColor    
+    // })
 
-        body.style.backgroundColor = colorGenerator();
-    })
+    let intervalVar
+    const colorChange = function() {
+      
+        intervalVar = setInterval(changeColor,1000);
+
+        function changeColor(){
+            document.body.style.backgroundColor = colorGenerator();
+        } 
+    };
+
+    const stopChangingColor = function(){
+        clearInterval(intervalVar)
+    }
+    document.querySelector("#start").addEventListener('click',colorChange);
+    
+    document.querySelector("#stop").addEventListener('click',stopChangingColor());
+    
+    
+
+
 
 </script>
 
